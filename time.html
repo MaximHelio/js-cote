@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+
+    // optimized for loop
+    let start = new Date().getTime()
+    let arr = Array(10000000).fill().map((_, i) => i)
+    let sum = 0
+    for (let i=0, j=arr.length; i<j; i++){
+      sum += arr[i]
+    }
+    let end = new Date().getTime()
+    console.log(end - start)
+
+    // for of
+    let start = new Date().getTime()
+    let arr = Array(10000000).fill().map((_, i) => i)
+    let sum = 0
+    for (let val of arr) {
+      sum += val
+    }
+    let end = new Date().getTime()
+    console.log(end - start)
+
+    // for in
+    let start = new Date().getTime()
+    let arr = Array(10000000).fill().map((_, i) => i)
+    let sum = 0
+    for (let idx in arr){
+      sum += arr[idx]
+    }
+    let end = new Date().getTime()
+    console.log(end - start)
+  </script>
+</body>
+</html>
