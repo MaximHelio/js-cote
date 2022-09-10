@@ -1,0 +1,4 @@
+var arr = [200, 100, 300];
+new_arr = [10000];
+arr.splice(2, 0, new_arr[0]);
+console.log(arr);
